@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: ./backend
+    ports: ['5000:5000']
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/nexus-chat
+      REDIS_URL: redis://redis:6379
